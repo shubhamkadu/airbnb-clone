@@ -17,17 +17,21 @@ function Search({ searchResult }) {
     <div>
       <Header placeholder={`${location} | ${range} | ${noOfGuests}`} />
       <div className="flex">
-        <section className="inline-flex min-h-[400px] min-w-[100%]">
+        <section
+          className="inline-flex min-h-[400px] min-w-[100%]
+           border border-radius-rounded p-4  hover:shadow-2xl 
+            transition duration-200 ease-out active:scale-95"
+        >
           <Map searchResult={searchResult} />
         </section>
       </div>
       <main className="flex">
-        <section className="flex-grow pt-14 px-6">
+        <section className="flex-grow pt-14 px-1 md:px-6 lg:px-6">
           <p className="text-xs">
             300+ stays -{range}- for {noOfGuests} Guests
           </p>
 
-          <h1 className="text-3xl font-semibold mt-2 mb-6 ">
+          <h1 className="text-3xl font-semibold mt-2 mb-6 animate-pulse">
             Stays in {location}
           </h1>
           <div
